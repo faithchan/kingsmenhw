@@ -1,12 +1,11 @@
 // DEPENDENCIES
 const express = require('express');
 const router = express.Router();
-const User = require('../models/User.js');
+const User = require('../models/users.js');
 
 // ROUTES
 // get index
 router.get('/', (req, res) => {
-  res.send("it works")
   // finds all users
   User.find({}, (err, foundUsers) => {
     // renders the room page
